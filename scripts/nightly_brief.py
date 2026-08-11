@@ -70,3 +70,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # after the brief is printed (and thus captured for delivery), clear the
+    # Telegram context so the next conversation starts fresh. Memory + skills persist.
+    try:
+        import subprocess, sys
+        subprocess.run([sys.executable, os.path.join(HERE, "clear_telegram_context.py")], timeout=60)
+    except Exception as e:
+        print("context clear skipped:", e)
