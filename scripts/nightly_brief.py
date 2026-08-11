@@ -56,8 +56,13 @@ def main():
     # countdown to Sept 1
     sept = datetime.date(2026, 9, 1)
     days = (sept - today).days
+    goals = d.get("goals", [])
+    target = ""
+    if goals:
+        g = goals[-1]
+        target = f"${g.get('cumTarget','?')}"
     if days >= 0:
-        out.append(f"⏳ {days} days until September — target ${d.get('goals',{}).get('targetTotal','?')}.")
+        out.append(f"⏳ {days} days until September — target {target} by Aug 31.")
     out.append("")
     out.append("Full dashboard: https://beefalo1234.github.io/business-dashboard/")
 
