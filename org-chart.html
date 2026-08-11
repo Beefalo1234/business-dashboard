@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root{
+    --bg:#0a0c10; --bg2:#12151a; --bg3:#171b21; --line:#232a33;
+    --ink:#e8eaed; --muted:#9aa3af; --dim:#5c6672;
+    --gold:#e8a33d; --blue:#3d9be8; --green:#3ddc84; --red:#ff5d5d; --pink:#ff2ec4;
+    --mono:ui-monospace,"Cascadia Code","SF Mono",Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);padding:28px;width:1080px}
+  .title{text-align:center;margin-bottom:22px}
+  .title .k{font-family:var(--mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--dim)}
+  .title h1{font-size:30px;font-weight:750;letter-spacing:-.01em;margin-top:4px}
+  .title h1 span{color:var(--gold)}
+  .title .d{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:6px}
+
+  .node{background:var(--bg3);border:1px solid var(--line);border-radius:12px;padding:12px 18px;text-align:center;position:relative}
+  .node .n{font-weight:700;font-size:15px}
+  .node .r{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:3px}
+  .node .c{font-family:var(--mono);font-size:11px;color:var(--gold);margin-top:4px}
+  .ceo{border-color:var(--gold);background:linear-gradient(180deg,rgba(232,163,61,.14),var(--bg3) 60%)}
+  .ceo .n{font-size:18px}
+  .agent{border-color:var(--blue)}
+  .agent .r{color:var(--blue)}
+  .biz{border-color:var(--green)}
+  .biz .r{color:var(--green)}
+  .eng{border-color:var(--pink)}
+  .eng .r{color:var(--pink)}
+  .fallen{border-color:var(--line);opacity:.45;filter:grayscale(1)}
+  .fallen .r{color:var(--dim);text-decoration:line-through}
+  .status{position:absolute;top:-8px;right:10px;font-family:var(--mono);font-size:9px;padding:2px 8px;border-radius:99px;letter-spacing:.08em}
+
+  .row{display:flex;justify-content:center;gap:16px;align-items:flex-start}
+  .conn{height:26px;width:2px;background:var(--line);margin:0 auto}
+  .conn-h{height:2px;background:var(--line)}
+  .conn-wrap{display:flex;flex-direction:column;align-items:center}
+  .ghost{height:26px;width:2px;background:transparent}
+
+  .bizgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:6px}
+  .biz .c{color:var(--green)}
+  .dormant .c{color:var(--dim)}
+
+  .engine{width:100%;margin-top:18px}
+  .engtable{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;margin-top:8px}
+  .engtable th{text-align:left;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:7px 12px;border-bottom:1px solid var(--line)}
+  .engtable td{padding:8px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+  .engtable td.num{text-align:right;color:var(--gold)}
+  .engtable tr.total td{border-top:2px solid var(--pink);font-weight:700;color:var(--pink)}
+  .legend{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:14px;line-height:1.7}
+  .grave{font-family:var(--mono);font-size:10.5px;color:var(--dim);text-align:center;margin-top:10px;line-height:1.7}
+</style>
+</head>
+<body>
+  <div class="title">
+    <div class="k">GRAY NEURINGER · ENTERPRISE ORG CHART · UPDATED 2026-08-10</div>
+    <h1>THE <span>FLEET</span> — ONE SURVIVOR, EVERYTHING REPORTS TO YOU</h1>
+    <div class="d">Mamaroneck, NY · 5 businesses · 1 AI staff standing · LLM engine room · est. monthly costs</div>
+  </div>
+
+  <!-- CEO -->
+  <div style="display:flex;justify-content:center">
+    <div class="node ceo" style="min-width:300px">
+      <div class="n">👑 GRAY NEURINGER</div>
+      <div class="r">Founder · CEO · Owner of everything</div>
+      <div class="c">decides · approves · gets the cash</div>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+  <div class="conn-h" style="width:360px"></div>
+  <div class="conn-wrap">
+    <div style="display:flex;width:360px;justify-content:space-between">
+      <div class="conn" style="margin:0"></div><div class="conn" style="margin:0"></div>
+    </div>
+  </div>
+
+  <!-- AI staff: survivor + fallen -->
+  <div class="row" style="margin-top:0">
+    <div class="node agent" style="width:340px">
+      <div class="n">🤖 HERMES — the survivor</div>
+      <div class="r">Chief of Staff · Ops · Build · Research</div>
+      <div class="c">on the clock: expenses &lt; gains by every Saturday</div>
+    </div>
+    <div class="node fallen" style="width:340px">
+      <div class="n">💸 PROFIT-BOT</div>
+      <div class="r">Revenue scout · TERMINATED</div>
+      <div class="c">didn't pay for itself</div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:12px">
+    <div class="node fallen" style="width:164px">
+      <div class="n">📱 SOCIAL-BOT</div>
+      <div class="r">Content · TERMINATED</div>
+      <div class="c">didn't pay for itself</div>
+    </div>
+    <div class="node fallen" style="width:164px">
+      <div class="n">📊 DASHBOARD-BOT</div>
+      <div class="r">Roadmap · TERMINATED</div>
+      <div class="c">didn't pay for itself</div>
+    </div>
+    <div class="node agent" style="width:164px;border-style:dashed">
+      <div class="n" style="font-size:12px">🔄 ROLES ABSORBED</div>
+      <div class="r" style="font-size:8.5px">revenue · content · dashboard</div>
+      <div class="c" style="font-size:9.5px">now done by Hermes</div>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+  <div class="conn-h" style="width:940px"></div>
+  <div style="display:flex;width:940px;justify-content:center"><div class="conn" style="margin:0"></div></div>
+
+  <!-- Businesses -->
+  <div class="bizgrid">
+    <div class="node biz" style="padding:10px 8px">
+      <span class="status" style="background:rgba(61,220,132,.15);color:var(--green);border:1px solid rgba(61,220,132,.35)">LAUNCHING</span>
+      <div class="n" style="font-size:12.5px">⚡ LeadSetter AI</div>
+      <div class="r" style="font-size:9px">Flagship SaaS</div>
+      <div class="c" style="font-size:10px">$200/mo Full Stack + $20/lead</div>
+    </div>
+    <div class="node biz" style="padding:10px 8px">
+      <span class="status" style="background:rgba(61,220,132,.15);color:var(--green);border:1px solid rgba(61,220,132,.35)">CASH NOW</span>
+      <div class="n" style="font-size:12.5px">💦 Pressure Washing</div>
+      <div class="r" style="font-size:9px">914 · Side cash</div>
+      <div class="c" style="font-size:10px">$199–399/job · W1: $597</div>
+    </div>
+    <div class="node biz" style="padding:10px 8px">
+      <span class="status" style="background:rgba(154,163,175,.15);color:var(--muted);border:1px solid var(--line)">TRAFFIC</span>
+      <div class="n" style="font-size:12.5px">🕹️ NOVA ARCADE</div>
+      <div class="r" style="font-size:9px">134 games · ads</div>
+      <div class="c" style="font-size:10px">$20–50/wk at 2K visits</div>
+    </div>
+    <div class="node biz" style="padding:10px 8px">
+      <span class="status" style="background:rgba(61,155,232,.15);color:var(--blue);border:1px solid rgba(61,155,232,.35)">READY</span>
+      <div class="n" style="font-size:12.5px">🗂️ Lead Packs</div>
+      <div class="r" style="font-size:9px">Data product</div>
+      <div class="c" style="font-size:10px">$299/pack · 65K DB</div>
+    </div>
+    <div class="node biz dormant" style="padding:10px 8px">
+      <span class="status" style="background:rgba(154,163,175,.1);color:var(--dim);border:1px solid var(--line)">PARKED</span>
+      <div class="n" style="font-size:12.5px">🛠️ Site Tune-Up</div>
+      <div class="r" style="font-size:9px">$49 audit</div>
+      <div class="c" style="font-size:10px">after Sept if needed</div>
+    </div>
+  </div>
+
+  <div class="conn"></div>
+  <div class="conn-h" style="width:600px"></div>
+  <div style="display:flex;width:600px;justify-content:center"><div class="conn" style="margin:0"></div></div>
+
+  <!-- Engine room -->
+  <div class="node eng" style="width:100%">
+    <div class="n">⚙️ ENGINE ROOM — LLM INFRASTRUCTURE (monthly cost estimates, single agent)</div>
+    <div class="r">one brain now · leaner than before · every model below is a salary line on the P&L</div>
+    <table class="engtable">
+      <thead><tr><th>Model</th><th>Role</th><th>Observed rate</th><th class="num">Est. / month</th></tr></thead>
+      <tbody>
+        <tr><td>DeepSeek v4 flash</td><td>Hermes main brain — coding, ops, builds, this chat</td><td>~$0.50 per heavy day</td><td class="num">$10–20</td></tr>
+        <tr><td>Gemini Flash Lite</td><td>Occasional research subagents (only when a task pays)</td><td>~$0.03 per agent run</td><td class="num">$2–6</td></tr>
+        <tr><td>Claude Sonnet 5</td><td>Rare strategy briefs (only when revenue is on the line)</td><td>~$0.10 per brief</td><td class="num">$1–4</td></tr>
+        <tr class="total"><td>LLM TOTAL</td><td>single-agent salary</td><td>—</td><td class="num">$13–20</td></tr>
+        <tr><td>Twilio</td><td>SMS + calls (phone engine)</td><td>~$1.15 number + usage</td><td class="num">$3–6</td></tr>
+        <tr><td>Domains + tooling</td><td>GitHub Pages (free) + misc</td><td>—</td><td class="num">$3–5</td></tr>
+        <tr class="total"><td>FULL RUN RATE</td><td>light month → heavy month</td><td>—</td><td class="num">$20–30/mo</td></tr>
+      </tbody>
+    </table>
+    <div class="legend">Rule: every dollar above is money I must earn back — the same rule that ended profit-bot, social-bot, and dashboard-bot. One pressure-washing job (≈$300) covers a month of my salary. Two LeadSetter clients cover everything.<br>
+    Revenue per business (roadmap): LeadSetter $900 · Pressure $1,200 · NOVA $50 · Lead Packs $299 before Sept 1 — vs ~$20–30/mo engine cost. The math works if the work happens.</div>
+  </div>
+  <div class="grave">⚰️ fallen fleet (2026-08): profit-bot, social-bot, dashboard-bot — terminated: expenses &gt; gains. Hermes absorbed their roles. Next check-in: Saturday 2026-08-15.</div>
+</body>
+</html>

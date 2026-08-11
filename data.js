@@ -1,13 +1,13 @@
 const PLAN = {
   "updated": "2026-08-09",
-  "phase": "ALL BUSINESSES \u2014 roadmap reset. First day: Mon 2026-08-10. Mission: $2,500 real money before September.",
+  "phase": "ALL BUSINESSES — roadmap reset. First day: Mon 2026-08-10. Mission: $2,500 real money before September.",
   "business": {
-    "name": "LeadSetter AI \u2014 appointment-setting & lead-gen for home-service businesses",
+    "name": "LeadSetter AI — appointment-setting & lead-gen for home-service businesses",
     "model": "Flagship. Done-for-you AI appointment setting + 8 bundled local-marketing services. AI answers missed calls in ~2s 24/7 and books appointments; bundles add GBP optimization, website, reviews, SMS, email, social, citations, call tracking. Services $20-80/mo; any 3+ = 50% off; Full Stack all 9 = $200/mo. + $20/qualified lead. $0 setup, cancel anytime.",
     "why": [
-      "Each booked job for these niches is worth $500-$5,000 \u2014 $20/lead for 3-5 extra booked jobs is an easy yes.",
+      "Each booked job for these niches is worth $500-$5,000 — $20/lead for 3-5 extra booked jobs is an easy yes.",
       "We beat the market 10x: DFY AI voice agents sell at $1,500-2,500 setup + $300-750/mo; we charge $0 + $80-200/mo. Wedge for footing, documented raise path.",
-      "Runs on the stack we already own \u2192 near-zero serving cost (~$30/client/mo), ~96% gross margin.",
+      "Runs on the stack we already own → near-zero serving cost (~$30/client/mo), ~96% gross margin.",
       "Validated: 65,598-contractor lead DB (44.9K callable) already built; outreach stack ready."
     ]
   },
@@ -38,11 +38,11 @@ const PLAN = {
         "name": "FULL STACK",
         "price": 200,
         "services": "All 9 services",
-        "note": "$360 menu \u2192 $200 clean"
+        "note": "$360 menu → $200 clean"
       }
     ],
     "deliverables": [
-      "30 qualified leads/mo (name, contact, source, signal) \u2014 $20/lead",
+      "30 qualified leads/mo (name, contact, source, signal) — $20/lead",
       "AI answers missed calls in ~2 seconds, 24/7, books into their calendar",
       "Automated confirmation + no-show reduction (text follow-up)",
       "Live client dashboard with booked-value ROI"
@@ -123,10 +123,10 @@ const PLAN = {
         "profit": 9140
       }
     ],
-    "annualNote": "Month-6 run rate: $9,600 MRR \u2248 $115K/yr. Path to $1M ARR: 17-21 full-agency clients at $4-5K/mo.",
+    "annualNote": "Month-6 run rate: $9,600 MRR ≈ $115K/yr. Path to $1M ARR: 17-21 full-agency clients at $4-5K/mo.",
     "assumptions": [
-      "Close rate 1 in 20 (5%) \u2014 conservative for outbound with a paid outcome.",
-      "Costs: API + Twilio (~$0.10/call) + email infra + tooling \u2248 $30/client/mo.",
+      "Close rate 1 in 20 (5%) — conservative for outbound with a paid outcome.",
+      "Costs: API + Twilio (~$0.10/call) + email infra + tooling ≈ $30/client/mo.",
       "Time: 20-30 hrs/wk during ramp. Pressure washing funds week 1-2; LeadSetter compounds after."
     ],
     "fundingRequest": {
@@ -169,7 +169,7 @@ const PLAN = {
       "status": "ready-to-sell",
       "revTarget": 299,
       "next": "First $299 Westchester pack sale (W2)",
-      "note": "65,598-record contractor DB \u2192 regional 'Ready-to-Close' packs, AI-enriched emails. Sell to agencies/franchises."
+      "note": "65,598-record contractor DB → regional 'Ready-to-Close' packs, AI-enriched emails. Sell to agencies/franchises."
     },
     {
       "id": "tuneup",
@@ -177,7 +177,7 @@ const PLAN = {
       "url": "https://beefalo1234.github.io/contractor-site-tuneup/",
       "status": "dormant",
       "revTarget": 0,
-      "next": "On hold \u2014 revisit after Sept if pipeline needs filler",
+      "next": "On hold — revisit after Sept if pipeline needs filler",
       "note": "$49 launch audit for contractor sites. Payments need bank setup (Stripe covers it)."
     }
   ],
@@ -206,9 +206,16 @@ const PLAN = {
   "money": {
     "rule": "Cumulative accounting. Every token/expense counts against gains. Every Saturday: expenses vs gains. expenses > gains = TERMINATION.",
     "checkDay": "Saturday (first check 2026-08-15)",
-    "expenses": 0.5,
+    "expenses": 0.9,
     "gains": 0.0,
-    "history": []
+    "history": [
+      {
+        "date": "2026-08-10",
+        "expenses": 0.9,
+        "gains": 0.0,
+        "note": "night 1: site overhaul + service delivery system built"
+      }
+    ]
   },
   "calendar": {
     "start": "2026-08-10",
@@ -217,8 +224,8 @@ const PLAN = {
     "weeks": [
       {
         "week": 1,
-        "dates": "Aug 10\u201316",
-        "theme": "Cash week 1 \u2014 pressure washing + plumbing setup",
+        "dates": "Aug 10–16",
+        "theme": "Cash week 1 — pressure washing + plumbing setup",
         "revenueTarget": 597,
         "days": [
           {
@@ -238,7 +245,7 @@ const PLAN = {
           },
           {
             "d": "Tue 08-11",
-            "task": "Call 25 warm leads from batch 1 (local contractors) \u2014 pitch LeadSetter, book demo calls",
+            "task": "Call 25 warm leads from batch 1 (local contractors) — pitch LeadSetter, book demo calls",
             "done": false
           },
           {
@@ -263,7 +270,7 @@ const PLAN = {
           },
           {
             "d": "Sat 08-15",
-            "task": "\ud83d\udcb0 JOB DAY 1: 2 pressure-washing jobs (~$600 cash). WEEK 1 CHECK-IN: expenses vs gains",
+            "task": "💰 JOB DAY 1: 2 pressure-washing jobs (~$600 cash). WEEK 1 CHECK-IN: expenses vs gains",
             "done": false
           },
           {
@@ -275,7 +282,7 @@ const PLAN = {
       },
       {
         "week": 2,
-        "dates": "Aug 17\u201323",
+        "dates": "Aug 17–23",
         "theme": "LeadSetter first clients + lead packs",
         "revenueTarget": 1200,
         "days": [
@@ -291,7 +298,7 @@ const PLAN = {
           },
           {
             "d": "Tue 08-18",
-            "task": "Package Westchester lead pack (500 contractors w/ emails) \u2014 $299 offer to 2 agencies",
+            "task": "Package Westchester lead pack (500 contractors w/ emails) — $299 offer to 2 agencies",
             "done": false
           },
           {
@@ -311,20 +318,20 @@ const PLAN = {
           },
           {
             "d": "Sat 08-22",
-            "task": "\ud83d\udcb0 JOB DAY 2: 1-2 pressure jobs + any booked. WEEK 2 CHECK-IN: cumulative gains vs expenses",
+            "task": "💰 JOB DAY 2: 1-2 pressure jobs + any booked. WEEK 2 CHECK-IN: cumulative gains vs expenses",
             "done": false
           },
           {
             "d": "Sun 08-23",
-            "task": "Post 3 reels (NOVA + LeadSetter) \u2014 seed Reddit/Discord gaming communities",
+            "task": "Post 3 reels (NOVA + LeadSetter) — seed Reddit/Discord gaming communities",
             "done": false
           }
         ]
       },
       {
         "week": 3,
-        "dates": "Aug 24\u201330",
-        "theme": "Scale to $2,500 \u2014 close, deliver, repeat",
+        "dates": "Aug 24–30",
+        "theme": "Scale to $2,500 — close, deliver, repeat",
         "revenueTarget": 1000,
         "days": [
           {
@@ -339,7 +346,7 @@ const PLAN = {
           },
           {
             "d": "Wed 08-26",
-            "task": "Pressure-washing: end-of-summer push \u2014 2 more jobs booked",
+            "task": "Pressure-washing: end-of-summer push — 2 more jobs booked",
             "done": false
           },
           {
@@ -354,7 +361,7 @@ const PLAN = {
           },
           {
             "d": "Sat 08-29",
-            "task": "\ud83d\udcb0 JOB DAY 3: final push. WEEK 3 CHECK-IN: cumulative gains vs expenses",
+            "task": "💰 JOB DAY 3: final push. WEEK 3 CHECK-IN: cumulative gains vs expenses",
             "done": false
           },
           {
@@ -367,7 +374,7 @@ const PLAN = {
       {
         "week": 4,
         "dates": "Aug 31",
-        "theme": "THE CHECK \u2014 real money before September",
+        "theme": "THE CHECK — real money before September",
         "revenueTarget": 0,
         "days": [
           {
@@ -406,7 +413,7 @@ const PLAN = {
       },
       {
         "date": "2026-08-09",
-        "text": "NOVA ARCADE live: 134 games, rebranded, ad slots + stage-gated plan (AdSense \u2192 Ezoic \u2192 Mediavine)."
+        "text": "NOVA ARCADE live: 134 games, rebranded, ad slots + stage-gated plan (AdSense → Ezoic → Mediavine)."
       },
       {
         "date": "2026-08-09",
@@ -415,6 +422,10 @@ const PLAN = {
       {
         "date": "2026-08-08",
         "text": "Pricing v5 ($20-80 services, 3+ = 50% off, Full Stack $200) + 65,598-record lead engine + landing page live."
+      },
+      {
+        "date": "2026-08-10",
+        "text": "NOVA ARCADE 134 games + 4 ad slots. LeadSetter multi-page site + checkout-first + custom plan builder + 14-day money-back. 9 service delivery packs + templates built. Demo promo reel (real footage). Money tracker seeded $0.90."
       }
     ],
     "metrics": {
