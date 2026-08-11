@@ -28,21 +28,21 @@ def main():
     out.append(f"   Check-in: {m.get('checkDay','Saturday')}")
     out.append("")
 
-    # today's task from the calendar
+    # today's task from the calendar (days keyed "Mon 08-10")
     task = None
+    want = today.strftime("%a %m-%d")
     for w in d.get("calendar", {}).get("weeks", []):
         for day in w.get("days", []):
-            if day.get("date") == today_s:
-                task = (w.get("title"), day)
+            if day.get("d") == want:
+                task = (w, day)
                 break
         if task: break
     if task:
-        wtitle, day = task
-        out.append(f"📌 TODAY ({wtitle}):")
-        for line in day.get("tasks", []):
-            out.append("   • " + line)
-        if day.get("revenueTarget"):
-            out.append(f"   🎯 week revenue target: {day['revenueTarget']}")
+        w, day = task
+        out.append(f"📌 TODAY ({w.get('theme','')}):")
+        out.append("   • " + day.get("task", ""))
+        if w.get("revenueTarget"):
+            out.append(f"   🎯 week revenue target: {w['revenueTarget']}")
     else:
         out.append("📌 TODAY: no task scheduled — see https://beefalo1234.github.io/business-dashboard/")
     out.append("")
@@ -50,7 +50,7 @@ def main():
     # businesses snapshot
     out.append("🏢 BUSINESSES:")
     for b in d.get("businesses", []):
-        out.append(f"   • {b.get('name','?')} [{b.get('status','?')}] — {b.get('nextAction','')}")
+        out.append(f"   • {b.get('name','?')} [{b.get('status','?')}] — {b.get('next','')}")
     out.append("")
 
     # countdown to Sept 1
